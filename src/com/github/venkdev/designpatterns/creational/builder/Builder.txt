@@ -1,0 +1,15 @@
+Conditions
+
+2 Classes.
+    Outer class which has to be built.
+        No setters for the attributes
+        One Constructor which accepts the inner class object as arg
+    Inner static class(helper class)
+        Contains all the attributes present in outer class
+        Contains a private constructor and a newInstance method
+        Contains setMethods for each of the attributes separately which would set the object and return the same instance(this)
+        Contains Build method which returns the outer class object(this);
+
+Overcomes the short comings of method chaining which fails in certain cases during concurrent access.
+Method chaining -> Setter methods returning "this" instance. Which can be accessed like below.
+student.setId(1).setName("aaa").setAddress("xyz");
